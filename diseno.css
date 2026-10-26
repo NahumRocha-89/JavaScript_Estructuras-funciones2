@@ -1,0 +1,210 @@
+/* ===== BASE ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #8fc6f4;          /* azul claro */
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+:focus-visible { outline: 3px solid #ffd54a; outline-offset: 2px; }
+
+/* ===== BARRA SUPERIOR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px 12px;
+  background-color: #3f7fc0;          /* azul medio */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar a:hover { background-color: #43719c; }
+
+/* ===== CONTENEDOR ===== */
+.container {
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  background-color: #0e5cc0;
+  border: 1px solid #2f7fe0;
+  border-radius: 26px;
+  padding: 20px 25px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-card {
+  border-radius: 6px;
+  background-color: #1166cc;
+}
+
+.header-card h1 { font-size: 26px; margin-bottom: 4px; }
+.header-card h2 { font-size: 20px; margin-bottom: 2px; }
+.header-card p  { font-size: 17px; }
+
+.card-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.ayuda {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  color: #dbeafe;
+}
+
+/* Cuadros internos de cada ejercicio */
+.ejercicio {
+  background-color: #1673d6;
+  padding: 12px 14px 14px;
+  margin-bottom: 8px;
+}
+
+/* ===== FORMULARIOS ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label { font-size: 16px; }
+
+.inline-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.inline-inputs input { width: 28%; }
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  max-width: 460px;
+  padding: 6px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #0b2a5e;
+  background: #ffffff;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.ejercicio .form-group { margin-bottom: 10px; }
+.ejercicio input[type="number"] { max-width: 200px; }
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 16px;
+  margin: 6px 0 14px;
+}
+
+.radio-group label { cursor: pointer; }
+.radio-group input { accent-color: #0b3d91; margin-right: 4px; }
+
+/* ===== BOTONES ===== */
+.btn {
+  background-color: #ffffff;
+  color: #0b3d91;
+  border: none;
+  padding: 7px 36px;
+  min-width: 190px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.btn:hover { background-color: #cfe3ff; }
+.btn:active { background-color: #a9cbf7; }
+
+/* ===== CAJA DE RESULTADOS ===== */
+.resultado {
+  margin-top: 14px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.resultado.error {
+  border-color: #ffd54a;
+  color: #ffe9a3;
+}
+
+.asteriscos {
+  font-size: 22px;
+  letter-spacing: 3px;
+  word-break: break-all;
+}
+
+/* ===== PIE ===== */
+.footer {
+  background-color: #062b78;
+  border: 1px solid #2872e5;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 10px;
+}
+
+.footer h3 { font-size: 18px; margin-bottom: 8px; }
+.footer p  { font-size: 15px; margin-bottom: 4px; }
+.footer a  { color: #ffffff; }
+
+/* ===== MÓVIL ===== */
+@media (max-width: 520px) {
+  .card { padding: 16px 14px 20px; border-radius: 20px; }
+  .navbar { gap: 8px; }
+  .btn { width: 100%; }
+  .inline-inputs input { width: 30%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de JavaScript - Oliver Nahum Lozano Rocha</title>
+  <link rel="stylesheet" href="css/diseno.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <nav class="navbar" aria-label="Programas">
+    <a href="#inicio">home</a>
+    <a href="#encuesta">Ejercicios 1</a>
+    <a href="#ejercicios2">Ejercicios 2-5</a>
+    <a href="#ciclos">While y For</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- CABECERA CON DATOS DEL ALUMNO -->
+    <header class="card header-card" id="inicio">
+      <h1>Ejercicios de JavaScript</h1>
+      <h2>OLIVER NAHUM LOZANO ROCHA</h2>
+      <p>406LDSM</p>
+    </header>
+
+    <!-- SECCIÓN 1: ENCUESTA Y VOTACIÓN (Switch) -->
+    <section id="encuesta" class="card">
+      <div class="card-title">¿De qué parte de la ciudad eres?</div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="ciudad">De qué ciudad eres:</label>
+        <select id="ciudad">
+          <option value="">Selecciona una opción</option>
+          <option value="León">León</option>
+          <option value="Silao">Silao</option>
+          <option value="Guanajuato">Guanajuato</option>
+        </select>
+      </div>
+
+      <div class="radio-group">
+        <span>Emite tu voto:</span>
+        <label><input type="radio" name="seccion" value="Norte"> Norte</label>
+        <label><input type="radio" name="seccion" value="Sur"> Sur</label>
+        <label><input type="radio" name="seccion" value="Centro"> Centro</label>
+      </div>
+
+      <button class="btn" onclick="votar()">Votar</button>
+
+      <div class="resultado" id="resEncuesta" role="status" aria-live="polite">Resultados de encuesta</div>
+    </section>
+
+    <!-- SECCIÓN 2: EJERCICIOS 2 - 5 -->
+    <section id="ejercicios2" class="card">
+      <div class="card-title">Ejercicios 2-5</div>
+
+      <div class="ejercicio">
+        <div class="sub-title">Suma de números positivos</div>
+        <p class="ayuda">Escribe números uno por uno. Con 0 o un negativo termina.</p>
+        <button class="btn" onclick="sumarPositivos()">Sumar</button>
+        <div class="resultado" id="resSuma" role="status" aria-live="polite">Resultados</div>
+      </div>
+
+      <div class="ejercicio">
+        <div class="sub-title">¿Cuál número es mayor?</div>
+        <div class="inline-inputs">
+          <input type="number" id="num1" placeholder="N1" aria-label="Número 1">
+          <input type="number" id="num2" placeholder="N2" aria-label="Número 2">
+          <input type="number" id="num3" placeholder="N3" aria-label="Número 3">
+        </div>
+        <button class="btn" onclick="compararNumeros()">Comparar</button>
+        <div class="resultado" id="resMayor" role="status" aria-live="polite">Resultados</div>
+      </div>
+
+      <div class="ejercicio">
+        <div class="sub-title">Cálculo de Importe Neto</div>
+        <div class="form-group">
+          <input type="number" id="importeBruto" placeholder="Importe bruto (€)" aria-label="Importe bruto">
+        </div>
+        <button class="btn" onclick="calcularImporte()">Calcular</button>
+        <div class="resultado" id="resImporte" role="status" aria-live="polite">Resultados</div>
+      </div>
+
+      <div class="ejercicio">
+        <div class="sub-title">Calculadora de sueldo</div>
+        <div class="form-group">
+          <input type="number" id="antiguedad" placeholder="Años en la empresa" aria-label="Años en la empresa">
+        </div>
+        <button class="btn" onclick="calcularSueldo()">Calcular</button>
+        <div class="resultado" id="resSueldo" role="status" aria-live="polite">Resultados</div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: WHILE Y FOR -->
+    <section id="ciclos" class="card">
+      <div class="card-title">Ejercicios con While y For</div>
+
+      <div class="ejercicio">
+        <div class="sub-title">Suma de impares del 1 al 100</div>
+        <button class="btn" onclick="sumarImpares()">Calcular impares</button>
+        <div class="resultado" id="resImpares" role="status" aria-live="polite">Resultados</div>
+      </div>
+
+      <div class="ejercicio">
+        <div class="sub-title">Imprimir asteriscos</div>
+        <div class="form-group">
+          <input type="number" id="cantAsteriscos" placeholder="Cantidad de asteriscos" aria-label="Cantidad de asteriscos">
+        </div>
+        <button class="btn" onclick="generarAsteriscos()">Generar</button>
+        <div class="resultado" id="resAsteriscos" role="status" aria-live="polite">Resultados</div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (DATOS DEL AUTOR) -->
+    <footer class="footer">
+      <h3>Datos del Autor</h3>
+      <p><strong>Alumno:</strong> Oliver Nahum Lozano Rocha</p>
+      <p><strong>Grupo:</strong> 406LDSM</p>
+      <p><strong>Fecha:</strong> Septiembre – Diciembre 2026</p>
+      <p><strong>Contacto:</strong> <a href="mailto:nahumlozano@gmail.com">nahumlozano@gmail.com</a></p>
+    </footer>
+
+  </div>
+
+  <script src="js/funcion.js"></script>
+</body>
+</html>
